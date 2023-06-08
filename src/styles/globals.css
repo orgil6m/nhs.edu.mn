@@ -1,27 +1,105 @@
+@import url("https://fonts.googleapis.com/css2?family=Roboto+Condensed:ital,wght@0,300;0,400;0,700;1,300;1,400;1,700&display=swap");
+
 @tailwind base;
 @tailwind components;
 @tailwind utilities;
 
-:root {
-  --foreground-rgb: 0, 0, 0;
-  --background-start-rgb: 214, 219, 220;
-  --background-end-rgb: 255, 255, 255;
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --foreground-rgb: 255, 255, 255;
-    --background-start-rgb: 0, 0, 0;
-    --background-end-rgb: 0, 0, 0;
+@layer components {
+  .hover-transition {
+    @apply transition-all duration-300 ease-in-out;
   }
 }
 
-body {
-  color: rgb(var(--foreground-rgb));
-  background: linear-gradient(
-      to bottom,
-      transparent,
-      rgb(var(--background-end-rgb))
-    )
-    rgb(var(--background-start-rgb));
+@layer base {
+  .responsive-padding {
+    @apply px-4;
+  }
+}
+
+@screen md {
+  .responsive-padding {
+    @apply px-20;
+  }
+}
+
+@screen 2xl {
+  .responsive-padding {
+    @apply px-40;
+  }
+}
+
+* {
+  font-family: "Roboto Condensed", sans-serif;
+}
+
+*::-webkit-scrollbar {
+  display: none;
+}
+
+/* Hide scrollbar for IE, Edge and Firefox */
+* {
+  -ms-overflow-style: none; /* IE and Edge */
+  scrollbar-width: none; /* Firefox */
+}
+
+.gradientButton::before {
+  content: "";
+  position: absolute;
+  height: calc(100% + 4px);
+  width: calc(100% + 4px);
+  transform: translate(-2px, -2px);
+  top: 0;
+  left: 0;
+  z-index: -1;
+  background: linear-gradient(45deg, #ff8ec7, #ac6aff, #2bffc8, #f5ca19);
+  background-size: 600% 600%;
+  border-radius: 4px;
+  animation: animatedgradient 1.2s ease alternate infinite;
+  background-size: 200% 200%;
+}
+
+@keyframes animatedgradient {
+  0% {
+    background-position: 0% 50%;
+  }
+  50% {
+    background-position: 100% 50%;
+  }
+  100% {
+    background-position: 0% 50%;
+  }
+}
+
+.text-stroke-white {
+  -webkit-text-stroke: 3px white;
+}
+
+.text-stroke-white-sm {
+  -webkit-text-stroke: 1.2px white;
+
+  background-clip: text;
+  -webkit-text-fill-color: transparent;
+  /* text-shadow: 1px 1px 2px black, 0 0 25px blue, 0 0 5px darkblue; */
+}
+
+.grad-to-bottom {
+  mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 1)
+  );
+  -webkit-mask-image: linear-gradient(
+    to bottom,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 1)
+  );
+}
+
+.grad-to-top {
+  mask-image: linear-gradient(to top, rgba(0, 0, 0, 0) 40%, rgba(0, 0, 0, 1));
+  -webkit-mask-image: linear-gradient(
+    to top,
+    rgba(0, 0, 0, 0) 40%,
+    rgba(0, 0, 0, 1)
+  );
 }
