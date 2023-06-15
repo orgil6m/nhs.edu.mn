@@ -1,10 +1,10 @@
 import React from "react";
 import Head from "next/head";
 
-const MetaHead = ({ title = "Nest Education IT School" }) => {
+const MetaHead = ({ title }) => {
   return (
     <Head>
-      <title>{title}</title>
+      <title>{title} Nest Education IT School</title>
       <meta name="title" content="Nest Education IT School" />
       <meta
         name="description"

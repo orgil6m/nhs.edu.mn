@@ -5,11 +5,11 @@ import MyTitle from "../components/title";
 import { useRouter } from "next/router";
 import {
   AcademicCapIcon,
-  LightIcon,
   HeartIcon,
   RocketIcon,
   ComputerIcon,
 } from "../assets/icons";
+import MetaHead from "../components/metaHead";
 
 const programs = [
   [
@@ -278,6 +278,7 @@ const Programs = () => {
   const locale = router.locale === "en" ? "1" : "0";
   return (
     <div className="relative overflow-hidden">
+      <MetaHead title="Сургалтын Хөтөлбөр | " />
       <Header />
       <div className="w-full responsive-padding">
         {programs[locale].map((row, index) => (

@@ -9,7 +9,7 @@ import img6 from "../../assets/videos/6.jpeg";
 import img7 from "../../assets/videos/7.jpeg";
 import img8 from "../../assets/videos/8.jpeg";
 import img9 from "../../assets/videos/9.jpeg";
-import Image from "next/image";
+
 import { videoLocales } from "../../i18n/locales";
 import { useRouter } from "next/router";
 import MyTitle from "../title";

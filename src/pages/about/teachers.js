@@ -4,7 +4,7 @@ import { useRouter } from "next/router";
 import TeacherCard from "../../components/cards/teacherCard";
 import Footer from "../../components/footer";
 import { aboutLocales } from "../../i18n/locales";
-
+import MetaHead from "../../components/metaHead";
 const Teachers = () => {
   const router = useRouter();
   const locale = router.locale === "en" ? "1" : "0";
@@ -861,6 +861,7 @@ const Teachers = () => {
   const colors = ["yellow", "pink", "primary", "green"];
   return (
     <div className="relative w-screen overflow-hidden">
+      <MetaHead title="Багш нарын баг | " />
       <div className="py-20 min-h-screen responsive-padding ">
         <Header />
         {teachersData[locale].map((row, index) => (

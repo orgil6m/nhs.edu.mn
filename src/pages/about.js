@@ -11,7 +11,7 @@ import React from "react";
 export default function About() {
   return (
     <div className="relative w-screen overflow-hidden">
-      <MetaHead title="Бидний тухай" />
+      <MetaHead title="Бидний тухай | " />
       <Header />
       <AboutNest />
       <Values />

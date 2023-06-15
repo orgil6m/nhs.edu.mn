@@ -29,7 +29,7 @@ export const newsData = [
         "Нэст Эдүкэйшн сургуулийн 2022-2023 оны хичээлийн жилийн тэтгэлгийн шалгалт болон 10, 11-р ангийн элсэлтийн шалгалтын хариу гарлаа.",
       text: "<p>Нэст Эдүкэйшн сургуулийн 2022-2023 оны хичээлийн жилийн тэтгэлгийн шалгалт болон<br> 10, 11-р ангийн элсэлтийн шалгалтын хариу гарлаа.</p><p>Дунд ангийн тэтгэлгийн шалгалтын хариуг гүйцэтгэлийн үнэлгээний дунджаар бодож 80-аас дээш хувийн дундаж үнэлгээтэй сурагчдыг тэнцүүлсэн болно. </p><p>Ахлах ангийн тэтгэлгийн шалгалтын хариуг гүйцэтгэлийн үнэлгээний дунджаар бодож 65-аас дээш хувийн дундаж үнэлгээтэй сурагчдыг тэнцүүлсэн болно. 10, 11-р ангийн элсэлтийн шалгалтад тэнцсэн сурагчид гэрээ байгуулан, төлбөрийн 50%-ийг төлснөөр суудал баталгаажна. Суудал баталгаажуулсан дарааллаар элсүүлэн авахыг анхаарна уу.</p> <img style='width: 100%' src='/assets/images/exam-6.jpg' /><img style='width: 100%' src='/assets/images/exam-7.jpg' /><img style='width: 100%' src='/assets/images/exam-8.jpg' /><img style='width: 100%' src='/assets/images/exam-9.jpg' /><img style='width: 100%' src='/assets/images/exam-10-1.jpg' /><img style='width: 100%' src='/assets/images/exam-10-2.jpg' /><img style='width: 100%' src='/assets/images/exam-11-1.jpg' /><img style='width: 100%' src='/assets/images/exam-11-2.jpg' />",
       createdAt: "2022-08-19",
-      imgUrl: "/assets/images/exam-title-big.jpg",
+      imgUrl: "/assets/images/exam-title.jpeg",
       imgSmall: "/assets/images/exam-title.jpeg",
     },
     {

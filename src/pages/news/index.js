@@ -13,8 +13,8 @@ const News = () => {
 
   return (
     <div className="flex flex-col pt-40 relative w-screen overflow-hidden">
-      <Header />
       <MetaHead title="Сургуулийн эргэн тойронд" />
+      <Header />
       <MyTitle
         row1={newsLocales[locale].labels[0]}
         row2={newsLocales[locale].labels[1]}

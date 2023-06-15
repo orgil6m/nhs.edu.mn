@@ -1,17 +1,15 @@
+/* eslint-disable react-hooks/exhaustive-deps */
 import React, { useState, useCallback, useEffect } from "react";
 import Header from "../components/header";
-import pin from "../assets/pin2.png";
 import { GoogleMap, useJsApiLoader, Marker } from "@react-google-maps/api";
 import Footer from "../components/footer";
-import cover1 from "../../public/assets/images/cover1.jpg";
 import cover2 from "../../public/assets/images/cover2.jpg";
 import cover3 from "../../public/assets/images/cover3.jpg";
-import cover4 from "../../public/assets/images/nestCover.gif";
 import { useForm } from "react-hook-form";
 import MyTitle from "../components/title";
 import { contactLocales } from "../i18n/locales";
 import { useRouter } from "next/router";
-
+import MetaHead from "../components/metaHead";
 const Contact = () => {
   const router = useRouter();
   const locale = router.locale === "en" ? "1" : "0";
@@ -86,6 +84,7 @@ const Contact = () => {
 
   return (
     <div className="min-h-screen pt-20 relative overflow-hidden">
+      <MetaHead title="Бидэнтэй холбогдох | " />
       <Header />
 
       <div
