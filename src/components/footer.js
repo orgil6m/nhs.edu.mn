@@ -14,6 +14,7 @@ import {
   LinkedinIcon,
 } from "../assets/icons";
 import IconButton from "./iconButton";
+import { Logo } from "./header";
 
 const Footer = () => {
   const contactInfos = [
@@ -76,7 +77,9 @@ const Footer = () => {
   return (
     <div className="responsive-padding border-t border-white/10 md:py-20 pt-20  pb-8 flex md:flex-row flex-col w-full justify-between">
       <div className="flex flex-col gap-10">
-        <Image src={logo.src} width={150} height={150} alt="logo" />
+        <div className="origin-left scale-[150%]">
+          <Logo />
+        </div>
         <div className="flex md:gap-5 gap-2 w-full ">
           {socials.map((row, index) => (
             <div key={index} className="scale-[120%] ">

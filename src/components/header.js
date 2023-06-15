@@ -212,7 +212,7 @@ const Header = () => {
 
 export default Header;
 
-const Logo = () => {
+export const Logo = () => {
   return (
     <svg
       width="114"
