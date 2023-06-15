@@ -3,6 +3,7 @@ import ProgramCard from "../cards/programCard";
 import baga from "../../assets/programs/baga.png";
 import dund from "../../assets/programs/dund.png";
 import ahlah from "../../assets/programs/ahlah.png";
+
 import { programsLocales } from "../../i18n/locales";
 import { useRouter } from "next/router";
 const Programs = () => {
