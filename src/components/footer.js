@@ -1,237 +1,116 @@
 import React from "react";
 import logo from "../assets/logo.svg";
 import Image from "next/image";
+import {
+  MailIcon,
+  MobileIcon,
+  LocationIcon,
+  ClockIcon,
+  FbIcon,
+  InstagramIcon,
+  YoutubeIcon,
+  DribbbleIcon,
+  GitIcon,
+  LinkedinIcon,
+} from "../assets/icons";
+import IconButton from "./iconButton";
 
 const Footer = () => {
-  const MailIcon = () => {
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-5 w-5"
-        viewBox="0 0 20 20"
-        fill="currentColor"
-      >
-        <path d="M2.003 5.884L10 9.882l7.997-3.998A2 2 0 0016 4H4a2 2 0 00-1.997 1.884z" />
-        <path d="M18 8.118l-8 4-8-4V14a2 2 0 002 2h12a2 2 0 002-2V8.118z" />
-      </svg>
-    );
-  };
-  const MobileIcon = () => {
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 18h.01M8 21h8a2 2 0 002-2V5a2 2 0 00-2-2H8a2 2 0 00-2 2v14a2 2 0 002 2z"
-        />
-      </svg>
-    );
-  };
-  const ScheduleIcon = () => {
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M12 8v4l3 3m6-3a9 9 0 11-18 0 9 9 0 0118 0z"
-        />
-      </svg>
-    );
-  };
-  const MapIcon = () => {
-    return (
-      <svg
-        xmlns="http://www.w3.org/2000/svg"
-        className="h-6 w-6"
-        fill="none"
-        viewBox="0 0 24 24"
-        stroke="currentColor"
-        strokeWidth={2}
-      >
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M17.657 16.657L13.414 20.9a1.998 1.998 0 01-2.827 0l-4.244-4.243a8 8 0 1111.314 0z"
-        />
-        <path
-          strokeLinecap="round"
-          strokeLinejoin="round"
-          d="M15 11a3 3 0 11-6 0 3 3 0 016 0z"
-        />
-      </svg>
-    );
-  };
-  const InstagramIcon = () => {
-    return (
-      <svg
-        width="25"
-        height="25"
-        viewBox="0 0 25 25"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12.75 6.21094C16.1953 6.21094 19.0391 9.05469 19.0391 12.5C19.0391 16 16.1953 18.7891 12.75 18.7891C9.25 18.7891 6.46094 16 6.46094 12.5C6.46094 9.05469 9.25 6.21094 12.75 6.21094ZM12.75 16.6016C14.9922 16.6016 16.7969 14.7969 16.7969 12.5C16.7969 10.2578 14.9922 8.45312 12.75 8.45312C10.4531 8.45312 8.64844 10.2578 8.64844 12.5C8.64844 14.7969 10.5078 16.6016 12.75 16.6016ZM20.7344 5.99219C20.7344 5.17188 20.0781 4.51562 19.2578 4.51562C18.4375 4.51562 17.7812 5.17188 17.7812 5.99219C17.7812 6.8125 18.4375 7.46875 19.2578 7.46875C20.0781 7.46875 20.7344 6.8125 20.7344 5.99219ZM24.8906 7.46875C25 9.49219 25 15.5625 24.8906 17.5859C24.7812 19.5547 24.3438 21.25 22.9219 22.7266C21.5 24.1484 19.75 24.5859 17.7812 24.6953C15.7578 24.8047 9.6875 24.8047 7.66406 24.6953C5.69531 24.5859 4 24.1484 2.52344 22.7266C1.10156 21.25 0.664062 19.5547 0.554688 17.5859C0.445312 15.5625 0.445312 9.49219 0.554688 7.46875C0.664062 5.5 1.10156 3.75 2.52344 2.32812C4 0.90625 5.69531 0.46875 7.66406 0.359375C9.6875 0.25 15.7578 0.25 17.7812 0.359375C19.75 0.46875 21.5 0.90625 22.9219 2.32812C24.3438 3.75 24.7812 5.5 24.8906 7.46875ZM22.2656 19.7188C22.9219 18.1328 22.7578 14.3047 22.7578 12.5C22.7578 10.75 22.9219 6.92188 22.2656 5.28125C21.8281 4.24219 21.0078 3.36719 19.9688 2.98438C18.3281 2.32812 14.5 2.49219 12.75 2.49219C10.9453 2.49219 7.11719 2.32812 5.53125 2.98438C4.4375 3.42188 3.61719 4.24219 3.17969 5.28125C2.52344 6.92188 2.6875 10.75 2.6875 12.5C2.6875 14.3047 2.52344 18.1328 3.17969 19.7188C3.61719 20.8125 4.4375 21.6328 5.53125 22.0703C7.11719 22.7266 10.9453 22.5625 12.75 22.5625C14.5 22.5625 18.3281 22.7266 19.9688 22.0703C21.0078 21.6328 21.8828 20.8125 22.2656 19.7188Z"
-          fill="white"
-        />
-      </svg>
-    );
-  };
-  const FacebookIcon = () => {
-    return (
-      <svg
-        width="25"
-        height="26"
-        viewBox="0 0 25 26"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M5.96875 26H0.882812V9.64844H5.96875V26ZM3.39844 7.46094C1.8125 7.46094 0.5 6.09375 0.5 4.45312C0.5 2.21094 2.90625 0.789062 4.875 1.9375C5.80469 2.42969 6.35156 3.41406 6.35156 4.45312C6.35156 6.09375 5.03906 7.46094 3.39844 7.46094ZM24.9453 26H19.9141V18.0703C19.9141 16.1562 19.8594 13.75 17.2344 13.75C14.6094 13.75 14.2266 15.7734 14.2266 17.9062V26H9.14062V9.64844H14.0078V11.8906H14.0625C14.7734 10.6328 16.4141 9.26562 18.875 9.26562C24.0156 9.26562 25 12.6562 25 17.0312V26H24.9453Z"
-          fill="white"
-        />
-      </svg>
-    );
-  };
-  const YoutubeIcon = () => {
-    return (
-      <svg
-        width="25"
-        height="25"
-        viewBox="0 0 25 25"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M12.75 6.21094C16.1953 6.21094 19.0391 9.05469 19.0391 12.5C19.0391 16 16.1953 18.7891 12.75 18.7891C9.25 18.7891 6.46094 16 6.46094 12.5C6.46094 9.05469 9.25 6.21094 12.75 6.21094ZM12.75 16.6016C14.9922 16.6016 16.7969 14.7969 16.7969 12.5C16.7969 10.2578 14.9922 8.45312 12.75 8.45312C10.4531 8.45312 8.64844 10.2578 8.64844 12.5C8.64844 14.7969 10.5078 16.6016 12.75 16.6016ZM20.7344 5.99219C20.7344 5.17188 20.0781 4.51562 19.2578 4.51562C18.4375 4.51562 17.7812 5.17188 17.7812 5.99219C17.7812 6.8125 18.4375 7.46875 19.2578 7.46875C20.0781 7.46875 20.7344 6.8125 20.7344 5.99219ZM24.8906 7.46875C25 9.49219 25 15.5625 24.8906 17.5859C24.7812 19.5547 24.3438 21.25 22.9219 22.7266C21.5 24.1484 19.75 24.5859 17.7812 24.6953C15.7578 24.8047 9.6875 24.8047 7.66406 24.6953C5.69531 24.5859 4 24.1484 2.52344 22.7266C1.10156 21.25 0.664062 19.5547 0.554688 17.5859C0.445312 15.5625 0.445312 9.49219 0.554688 7.46875C0.664062 5.5 1.10156 3.75 2.52344 2.32812C4 0.90625 5.69531 0.46875 7.66406 0.359375C9.6875 0.25 15.7578 0.25 17.7812 0.359375C19.75 0.46875 21.5 0.90625 22.9219 2.32812C24.3438 3.75 24.7812 5.5 24.8906 7.46875ZM22.2656 19.7188C22.9219 18.1328 22.7578 14.3047 22.7578 12.5C22.7578 10.75 22.9219 6.92188 22.2656 5.28125C21.8281 4.24219 21.0078 3.36719 19.9688 2.98438C18.3281 2.32812 14.5 2.49219 12.75 2.49219C10.9453 2.49219 7.11719 2.32812 5.53125 2.98438C4.4375 3.42188 3.61719 4.24219 3.17969 5.28125C2.52344 6.92188 2.6875 10.75 2.6875 12.5C2.6875 14.3047 2.52344 18.1328 3.17969 19.7188C3.61719 20.8125 4.4375 21.6328 5.53125 22.0703C7.11719 22.7266 10.9453 22.5625 12.75 22.5625C14.5 22.5625 18.3281 22.7266 19.9688 22.0703C21.0078 21.6328 21.8828 20.8125 22.2656 19.7188Z"
-          fill="white"
-        />
-      </svg>
-    );
-  };
-  const LinkedInIcon = () => {
-    return (
-      <svg
-        width="28"
-        height="29"
-        viewBox="0 0 28 29"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14 0.9375C21.4375 0.9375 27.5625 7.0625 27.5625 14.5C27.5625 21.9922 21.4375 28.0625 14 28.0625C6.50781 28.0625 0.4375 21.9922 0.4375 14.5C0.4375 7.0625 6.50781 0.9375 14 0.9375ZM22.9141 7.22656C22.6953 7.55469 20.7812 10.0156 16.4609 11.7656C16.8984 12.6406 17.1719 13.2969 17.5 14.0625C21.3281 13.5703 25.1562 14.3359 25.5391 14.4453C25.5391 11.7109 24.5547 9.19531 22.9141 7.22656ZM21.6562 5.85938C18.8125 3.34375 14.9297 2.41406 11.2656 3.28906C11.5938 3.72656 13.6719 6.57031 15.5859 10.0703C19.6875 8.53906 21.4375 6.1875 21.6562 5.85938ZM9.02344 4.05469C5.79688 5.58594 3.39062 8.59375 2.625 12.1484C3.17188 12.2031 7.92969 12.2031 13.3438 10.7812C11.4297 7.33594 9.35156 4.49219 9.02344 4.05469ZM2.40625 14.5547C2.40625 17.5078 3.5 20.2422 5.35938 22.2656C7.21875 19.0938 11.0469 15.7031 15.2578 14.5C14.9297 13.8438 14.6562 13.1875 14.2734 12.5312C8.53125 14.2812 2.89844 14.2266 2.40625 14.1719C2.40625 14.3359 2.40625 14.4453 2.40625 14.5547ZM6.83594 23.6875C10.2812 26.3672 14.7656 26.8047 18.4844 25.2188C18.3203 24.1797 17.6641 20.625 16.0234 16.4141C11.375 18 8.09375 21.2266 6.83594 23.6875ZM20.4531 24.125C23.0234 22.375 24.8828 19.5859 25.4297 16.3594C24.9922 16.25 21.8203 15.3203 18.2109 15.8672C19.6875 20.0781 20.3438 23.4688 20.4531 24.125Z"
-          fill="white"
-        />
-      </svg>
-    );
-  };
-  const TavdahIcon = () => {
-    return (
-      <svg
-        width="16"
-        height="29"
-        viewBox="0 0 16 29"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M14.2578 16.25H10.1562V28.5H4.6875V16.25H0.203125V11.2188H4.6875V7.33594C4.6875 2.96094 7.3125 0.5 11.3047 0.5C13.2188 0.5 15.2422 0.882812 15.2422 0.882812V5.20312H13C10.8125 5.20312 10.1562 6.51562 10.1562 7.9375V11.2188H15.0234L14.2578 16.25Z"
-          fill="white"
-        />
-      </svg>
-    );
-  };
-  const ZurgaadahIcon = () => {
-    return (
-      <svg
-        width="26"
-        height="25"
-        viewBox="0 0 26 25"
-        fill="none"
-        xmlns="http://www.w3.org/2000/svg"
-      >
-        <path
-          d="M24.5078 11.4609C25.1094 12.0625 25.1094 13.0469 24.5078 13.6484L13.8438 24.3125C13.2422 24.9141 12.2578 24.9141 11.6562 24.3125L0.9375 13.5938C0.335938 12.9922 0.335938 12.0078 0.9375 11.4062L8.26562 4.02344L11.0547 6.8125C10.7266 7.63281 10.9453 8.83594 12.0938 9.27344V16C10.8359 16.4922 10.5078 18.1328 11.4375 19.0625C12.2031 19.8281 13.3516 19.8281 14.1172 19.0625C14.8281 18.3516 14.9922 16.7656 13.625 16.0547V9.38281L16.1406 11.9531C15.375 13.8125 17.7812 15.4531 19.2031 13.9766C20.625 12.5547 19.1484 10.2578 17.2891 10.8594L14.5547 8.17969C15.0469 6.70312 13.6797 5.28125 12.2031 5.77344L9.35938 2.98438L11.6016 0.742188C12.2031 0.140625 13.1875 0.140625 13.8438 0.742188L24.5078 11.4609Z"
-          fill="white"
-        />
-      </svg>
-    );
-  };
-
   const contactInfos = [
-    { icon: <MailIcon />, label: "contact@nhs.edu.mn", label2: "", label3: "" },
+    {
+      icon: <MailIcon />,
+      labels: [
+        { label: "contact@nhs.edu.mn", link: "mailto:contact@nhs.edu.mn" },
+      ],
+    },
     {
       icon: <MobileIcon />,
-      label: "7799-555, 7799-4444",
-      label2: "",
+      labels: [
+        { label: "7799-555", link: "tel:77995555" },
+        { label: "7799-4444", link: "tel:77994444" },
+      ],
     },
     {
-      icon: <ScheduleIcon />,
-      label: "Даваа - Баасан 10:00 - 16:00 ",
-      label2: "Бямба - Ням: Амарна",
-      label3: "",
+      icon: <ClockIcon />,
+      labels: [
+        { label: "Даваа - Баасан 10:00 - 16:00, \n Бямба - Ням: Амарна" },
+      ],
     },
     {
-      icon: <MapIcon />,
-      label: "Нэст Эдүкэйшн сургуулийн байр, ",
-      label2: "Оюутны гудамж, 8-р хороо, Сүхбаатар дүүрэг, ",
-      label3: "Улаанбаатар хот",
+      icon: <LocationIcon />,
+      labels: [
+        {
+          label:
+            " Нэст Эдүкэйшн сургуулийн байр \n Оюутны гудамж, 8-р хороо, Сүхбаатар дүүрэг, \n Улаанбаатар хот",
+        },
+      ],
     },
   ];
-  const Socials = [
-    { icon: <InstagramIcon /> },
-    { icon: <FacebookIcon /> },
-    { icon: <YoutubeIcon /> },
-    { icon: <LinkedInIcon /> },
-    { icon: <TavdahIcon /> },
-    { icon: <ZurgaadahIcon /> },
+  const socials = [
+    {
+      icon: <FbIcon />,
+      link: "https://www.facebook.com/NestEducationSchool",
+    },
+    {
+      icon: <InstagramIcon />,
+      link: "https://www.instagram.com/nest_education_it_school/",
+    },
+    {
+      icon: <YoutubeIcon />,
+      link: "https://www.youtube.com/@nesteducationitschool3493",
+    },
+    {
+      icon: <LinkedinIcon />,
+      link: "",
+    },
+    {
+      icon: <DribbbleIcon />,
+      link: "",
+    },
+    {
+      icon: <GitIcon />,
+      link: "",
+    },
   ];
+
   return (
-    <div className="flex h- w-full justify-evenly">
-      <div className="w-2/3">
-        <Image src={logo.src} width={100} height={100} alt="logo" />
-        <div className="h-30 ">
-          {Socials.map((row, index) => (
-            <div key={index}>{row.icon}</div>
-          ))}
-        </div>
-      </div>
-      <div className="w-1/3 flex">
-        <div className="h-20 w-1/5 text-white flex flex-col justify-between items-start gap-5 ">
-          {contactInfos.map((row, index) => (
-            <div className="flex gap-5 " key={index}>
-              {row.icon}
-              {/* {row.label}
-              {row.label2}
-              {row.label3} */}
+    <div className="responsive-padding border-t border-white/10 md:py-20 pt-20  pb-8 flex md:flex-row flex-col w-full justify-between">
+      <div className="flex flex-col gap-10">
+        <Image src={logo.src} width={150} height={150} alt="logo" />
+        <div className="flex md:gap-5 gap-2 w-full ">
+          {socials.map((row, index) => (
+            <div key={index} className="scale-[120%] ">
+              <IconButton href={row.link} icon={row.icon} />
             </div>
           ))}
         </div>
-        <div className="h-20 w-4/5 text-white flex flex-col justify-between items-start gap-5 ">
-          {contactInfos.map((row, index) => (
-            <div className="flex flex-col gap-5" key={index}>
-              {/* {row.icon} */}
-              {row.label}
-              {row.label2}
-              {row.label3}
-            </div>
-          ))}
-        </div>
+        <span className="font-light md:flex hidden">
+          © 2023 | Nest Education IT School | V.2.0
+        </span>
       </div>
+      <div className="text-white flex flex-col justify-between items-start gap-5 md:mt-0 mt-20">
+        {contactInfos.map((row, index) => (
+          <div className="flex md:gap-5 gap-2 items-center" key={index}>
+            <IconButton icon={row.icon} />
+            <div className="flex flex-col">
+              {row.labels.map((r, i) => (
+                <a
+                  href={r.link}
+                  key={i}
+                  className={`font-light whitespace-pre-wrap ${
+                    r.link && "underline"
+                  }`}
+                >
+                  {r.label}
+                </a>
+              ))}
+            </div>
+          </div>
+        ))}
+      </div>
+      <span className="font-light md:hidden flex mt-20 text-center ">
+        © 2023 | Nest Education IT School | V.2.0
+      </span>
     </div>
   );
 };

@@ -1,20 +1,26 @@
 import Link from "next/link";
-import React, { useState } from "react";
+import { useRouter } from "next/router";
 
 const HeaderDropDown = ({ row }) => {
+  const router = useRouter();
+
   return (
-    <div className="relative group">
-      <button className="flex items-center gap-1">
+    <div className="relative group z-50">
+      <Link className="flex items-center gap-1" href={row.path}>
         <p>{row.label}</p>
         <DownIcon />
-      </button>
-      <div className="absolute py-3 pt-4 flex-col hidden group-hover:flex hover:flex">
-        <div className="bg-gradient-to-b from-dark/10 to-dark/5 backdrop-blur-lg flex flex-col rounded overflow-hidden text-white border border-white/5">
+      </Link>
+      <div className="absolute py-3 pt-4 flex-col  hidden group-hover:flex hover:flex z-50">
+        <div className="bg-dark/10   flex flex-col rounded overflow-hidden text-white border backdrop-blur-xl border-white/5">
           {row.content.map((row, index) => (
             <Link
               href={row.path}
               key={index}
-              className="px-6 py-3 w-60 hover:bg-white/5 hover-transition hover:text-white"
+              className={`px-6 py-3 w-60 z-50  hover-transition hover:text-white ${
+                row.path == router.asPath || row.path == router.pathname
+                  ? "bg-white/10"
+                  : "hover:bg-white/10"
+              }`}
             >
               {row.label}
             </Link>
