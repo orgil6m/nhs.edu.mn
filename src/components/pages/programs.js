@@ -1,8 +1,8 @@
 import React from "react";
 import ProgramCard from "../cards/programCard";
-import baga from "../../assets/programs/baga.png";
-import dund from "../../assets/programs/dund.png";
-import ahlah from "../../assets/programs/ahlah.png";
+import baga from "../../assets/programs/baga.svg";
+import dund from "../../assets/programs/dund.svg";
+import ahlah from "../../assets/programs/ahlah.svg";
 
 import { programsLocales } from "../../i18n/locales";
 import { useRouter } from "next/router";

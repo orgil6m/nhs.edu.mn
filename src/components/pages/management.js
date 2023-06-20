@@ -1,11 +1,12 @@
 import React from "react";
 import ManagementCard from "../cards/managementCard";
-import management1 from "../../assets/management/1.jpg";
-import management2 from "../../assets/management/2.jpg";
-import management3 from "../../assets/management/3.jpg";
-import management4 from "../../assets/management/4.jpg";
-import management5 from "../../assets/management/5.jpg";
-import management6 from "../../assets/management/6.jpg";
+import management1 from "../../assets/management/oyun-erdene-min.jpg";
+import management2 from "../../assets/management/khash-erdene-min.jpg";
+import management3 from "../../assets/management/tumurzaya-min.jpg";
+import management4 from "../../assets/management/baasankhuu-min.jpg";
+import management5 from "../../assets/management/sodod-min.jpg";
+import management6 from "../../assets/management/baigalkhuu-min.jpg";
+import management7 from "../../assets/management/lkhagvasuren-min.jpg";
 import { useRouter } from "next/router";
 import { aboutLocales } from "../../i18n/locales";
 import MyTitle from "../title";
@@ -76,6 +77,16 @@ const Management = () => {
         twitter: "",
         email: "",
       },
+      {
+        img: management7.src,
+        lastname: "П",
+        firstname: "Лхагвасүрэн",
+        role: "Хөтөлбөрийн хорооны дарга",
+        fb: "",
+        ig: "",
+        twitter: "",
+        email: "",
+      },
     ],
     [
       {
@@ -133,6 +144,16 @@ const Management = () => {
         lastname: "B",
         firstname: "Baigalkhuu",
         role: "Chief Human Resources Officer (CHRO)",
+        fb: "",
+        ig: "",
+        twitter: "",
+        email: "",
+      },
+      {
+        img: management7.src,
+        lastname: "P",
+        firstname: "Lkhagvasuren",
+        role: "Director of the Program Committee",
         fb: "",
         ig: "",
         twitter: "",

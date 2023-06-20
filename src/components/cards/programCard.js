@@ -9,7 +9,7 @@ const ProgramCard = ({ data }) => {
   const locale = router.locale === "en" ? "1" : "0";
   return (
     <div className="shrink-0 md:w-full flex justify-center items-center flex-col border border-white/10  backdrop-blur-xl rounded-lg py-12 px-8">
-      <div className="w-1/2 aspect-square relative">
+      <div className="w-2/3 aspect-square relative mb-8">
         <Image src={data.img} fill alt={data.label} />
       </div>
       <span className="text-2xl font-bold">{data.label}</span>

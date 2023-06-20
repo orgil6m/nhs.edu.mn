@@ -58,6 +58,7 @@ export const headerLocales = [
     admission: { label: "Admissions" },
   },
 ];
+
 export const landingLocales = [
   {
     fly: {
@@ -72,6 +73,7 @@ export const landingLocales = [
     carousel: { labels: ["Lets learn", "Happily"] },
   },
 ];
+
 export const aboutLocales = [
   {
     introduction: {

@@ -14,13 +14,13 @@ const ManagementCard = ({ value }) => {
     <div className="relative w-full">
       <div className="w-full flex flex-col group cursor-pointer">
         <div
-          className="w-full aspect-square rounded-xl bg-center bg-cover z-20"
+          className="w-full aspect-square rounded-xl bg-top bg-cover z-20"
           style={{
             backgroundImage: `url(${value.img})`,
           }}
         />
         <div
-          className="hover-transition absolute w-full h-full opacity-10 scale-[120%] md:group-hover:opacity-30 bg-cover bg-center blur-3xl"
+          className="hover-transition absolute w-full h-full opacity-10 scale-[120%] md:group-hover:opacity-30 bg-cover bg-bottom blur-3xl"
           style={{ backgroundImage: `url(${value.img})` }}
         />
         <div className="flex flex-col justify-center items-center z-20">
