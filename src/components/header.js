@@ -13,7 +13,7 @@ const Header = () => {
   const { pathname, asPath, query } = router;
   const [isOpen, setIsOpen] = useState(false);
   const [admission, setAdmission] = useState(true);
-  const [admissionLink, setAdmissionLink] = useState("http://google.mn");
+  const [admissionLink, setAdmissionLink] = useState("https://nhs.edu.mn");
 
   const genericHamburgerLine = `h-1 w-8 my-1 rounded-full bg-white transition ease transform duration-300 `;
   const navs = [

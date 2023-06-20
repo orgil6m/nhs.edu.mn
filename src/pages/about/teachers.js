@@ -255,7 +255,7 @@ const Teachers = () => {
           img: "https://nhs.edu.mn/assets/images/bagsh1.jpg",
           firstname: "Лхагвасүрэн",
           lastname: "П",
-          role: "Математикийн багш",
+          role: "Химийн багш",
           detail: "Хөтөлбөрийн хорооны дарга",
           experience: [
             {
