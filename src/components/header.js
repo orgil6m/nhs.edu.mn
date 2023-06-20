@@ -12,6 +12,9 @@ const Header = () => {
   const locale = router.locale === "en" ? "1" : "0";
   const { pathname, asPath, query } = router;
   const [isOpen, setIsOpen] = useState(false);
+  const [admission, setAdmission] = useState(true);
+  const [admissionLink, setAdmissionLink] = useState("http://google.mn");
+
   const genericHamburgerLine = `h-1 w-8 my-1 rounded-full bg-white transition ease transform duration-300 `;
   const navs = [
     {
@@ -39,6 +42,10 @@ const Header = () => {
         {
           label: headerLocales[locale].about.contents[3],
           path: "/about/teachers",
+        },
+        {
+          label: headerLocales[locale].about.contents[4],
+          path: "https://www.zangia.mn/company/Nest-Education-LLC/",
         },
       ],
     },
@@ -116,10 +123,12 @@ const Header = () => {
             MN
           </button>
         </div>
-        <GradientButton
-          label={headerLocales[locale].admission.label}
-          event={() => window.open("https://google.com", "_ blank")}
-        />
+        {admission && (
+          <GradientButton
+            label={headerLocales[locale].admission.label}
+            event={() => window.open(`${admissionLink}`, "_ blank")}
+          />
+        )}
       </div>
       <div className="md:hidden flex items-center gap-5">
         <div className="font-bold flex items-center gap-2 text-xl">
