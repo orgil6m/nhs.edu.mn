@@ -7,6 +7,7 @@ import { useRouter } from "next/router";
 import { newsLocales } from "../../i18n/locales.js";
 import { Markup } from "interweave";
 import NewsCard from "../../components/cards/newsCard.js";
+import MetaHead from "../../components/metaHead.js";
 
 export const getServerSideProps = async (context) => {
   const { id } = context.query;
@@ -27,6 +28,7 @@ const NewsId = ({ data }) => {
   return (
     <div className="relative overflow-hidden">
       <Header />
+      <MetaHead title={data.title} cover={data.imgUrl} />
       <div className="w-full flex flex-col items-center justify-center py-40 responsive-padding ">
         <div className="md:w-[70%] w-full flex flex-col gap-5">
           <span className="md:text-4xl text-2xl font-bold ">{data.title}</span>
